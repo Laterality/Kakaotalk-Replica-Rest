@@ -60,7 +60,7 @@ export function createUser(req : express.Request, res : express.Response) : void
  * Method : GET
  * 
  * Request
- * @query.id : 사용자 id
+ * @param.id : 사용자 id
  * 
  * Response
  * @body.result : string, 처리 결과["success", "not found", "error"]

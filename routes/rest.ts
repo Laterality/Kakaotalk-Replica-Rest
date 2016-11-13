@@ -4,6 +4,7 @@ import * as multer from "multer";
 import * as rest_user from "./user";
 import * as rest_device from "./device";
 import * as rest_auth from "./auth";
+import * as rest_chatroom from "./chatroom";
 
 "use strict";
 
@@ -33,4 +34,12 @@ router
 .put("/device", (req : express.Request, res : express.Response) =>
 {
 	rest_device.updateDeviceOwner(req, res);
+})
+.get("/cahtroom/:param", (req : express.Request, res : express.Response) =>
+{
+	rest_chatroom.retrieveChatroom(req, res);
+})
+.post("/chatroom", (req : express.Request, res : express.Response) =>
+{
+	rest_chatroom.createChatroom(req, res,);
 });

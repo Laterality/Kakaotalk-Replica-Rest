@@ -93,7 +93,7 @@ export function createDevice(req : express.Request, res : express.Response) : vo
 
 
 /**
- * 디바이스 등록 API
+ * 디바이스 갱신 API
  * 
  * Path : /api/device
  * Method : PUT
@@ -104,7 +104,7 @@ export function createDevice(req : express.Request, res : express.Response) : vo
  * 
  * Response
  * @body.result : 처리 결과["not found", "success", "error"]
- * @body.user : 갱신된 디바이스 정보
+ * @body.device : 갱신된 디바이스 정보
  */
 export function updateDeviceOwner(req : express.Request, res : express.Response)
 {
@@ -125,6 +125,7 @@ export function updateDeviceOwner(req : express.Request, res : express.Response)
 		{
 			console.log("device not found");
 			result["result"] = "not found";
+			result["device"] = _result;
 			return util.responseWithJson(req, res, result, 200);
 		}
 	}, (_err) =>

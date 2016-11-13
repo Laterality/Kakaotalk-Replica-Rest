@@ -52,9 +52,8 @@ export let DeviceSchema = new Schema(
 			enum : ["android", "ios", "windows"]
 		},
 		token : Schema.Types.String,
-		number :
+		_number :
 		{
-			index : true,
 			country : Schema.Types.String,
 			_number : Schema.Types.String
 		},
