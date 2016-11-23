@@ -1,7 +1,12 @@
 {
 	"compilerOptions": {
+		"outDir": ".",
 		"target": "es6",
 		"module": "commonjs",
 		"sourceMap": true
-	}
+	},
+	"files":
+	[
+		"src/**/*.ts"
+	]
 }
